@@ -15,9 +15,22 @@ a {
     color: black;
 }
 
+.btn-form {
+    background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%);
+    border: 2px solid rgb(28, 110, 164); 
+    width: 100px; 
+}
+
 .btn-table {
     background-image: linear-gradient(to right, rgb(124, 122, 122) 0%, rgb(167, 165, 165) 50%, grey 100%); 
     border: 2px solid rgb(124, 122, 122);
+}
+
+.modal-content {
+    padding: 15px;
+    font-weight: bold;
+    background-image: url(../images/old-paper-background.jpg);
+    background-attachment: fixed;
 }
 
 .table-header {

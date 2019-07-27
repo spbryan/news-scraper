@@ -33,4 +33,14 @@ $(function () {
             }
         );
     })
+
+    /**
+     * On-Click event to bring up modal to add 
+     * Comment Information
+     */
+    $("#comment-btn").on("click", function (event) {
+        event.preventDefault();
+        $("#comment-modal").modal();
+    });
+    
 });
