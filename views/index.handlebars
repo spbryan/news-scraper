@@ -5,24 +5,103 @@
  * 
  * 2019-07-27
  ********************************/ --}}
-<div class='table-responsive'>
-  <table class="table table-striped stencil-font bigger-font" id="article-table">
-    <thead class="table-header">
-      <tr>
-        <th scope="col">Title</th>
-        <th scope="col">Link</th>
-      </tr>
-    </thead>
-    <tbody class="table-body">
-      {{#each article}}
-      <tr class="table-row">
-        <td>{{title}}</td>
-        <td>{{link}}</td>
-        {{!-- <td class="align-middle"><button class="btn btn-table raised view-button" data-value="{{id}}">View</button></td> --}}
-        {{!-- <td class="align-middle"><button class="btn btn-table raised delete-button" data-value="{{id}}">&times;</button> --}}
-        </td>
-      </tr>
-      {{/each}}
-    </tbody>
-  </table>
-</div>
+<section class="container" id="main-page">
+  <section class="row text-center mt-1">
+    <div class="col-sm-12" id="header">
+      <h1>New Hampshire News Bulleton</h1>
+      <h2>Read Free or Die</h2>
+    </div>
+  </section>
+
+  <section class="row mt-1">
+    <div class='col-sm-4'>
+      <div id="carouselId" class="carousel slide" data-ride="carousel" data-interval="8000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/images/seascape-background.jpg" class="d-block w-100 h-75" alt="...">
+            <div class="carousel-caption d-none d-md-block carousel-caption-verticle">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/images/tug-boat-background.jpg" class="d-block w-100 h-75" alt="...">
+            <div class="carousel-caption d-none d-md-block carousel-caption-horizontal"><br>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/images/lighthouse-background.jpg" class="d-block w-100 h-75" alt="...">
+            <div class="carousel-caption d-none d-md-block carousel-caption-verticle">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='col-sm-4'>
+      <div id="carouselId" class="carousel slide" data-ride="carousel" data-interval="9000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/images/seascape-background.jpg" class="d-block w-100 h-75" alt="...">
+            <div class="carousel-caption d-none d-md-block carousel-caption-verticle">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/images/tug-boat-background.jpg" class="d-block w-100 h-75" alt="...">
+            <div class="carousel-caption d-none d-md-block carousel-caption-horizontal"><br>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/images/lighthouse-background.jpg" class="d-block w-100 h-75" alt="...">
+            <div class="carousel-caption d-none d-md-block carousel-caption-verticle">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='col-sm-4'>
+      <div id="carouselId" class="carousel slide" data-ride="carousel" data-interval="10000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/images/seascape-background.jpg" class="d-block w-100 h-75" alt="...">
+            <div class="carousel-caption d-none d-md-block carousel-caption-verticle">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/images/tug-boat-background.jpg" class="d-block w-100 h-75" alt="...">
+            <div class="carousel-caption d-none d-md-block carousel-caption-horizontal"><br>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/images/lighthouse-background.jpg" class="d-block w-100 h-75" alt="...">
+            <div class="carousel-caption d-none d-md-block carousel-caption-verticle">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="row mt-4">
+    <div class='col-sm-12 table-responsive'>
+      <table class="table table-striped stencil-font bigger-font" id="article-table">
+        <thead class="table-header">
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Title</th>
+            <th scope="col">Link</th>
+          </tr>
+        </thead>
+        <tbody class="table-body">
+          {{#each article}}
+          <tr class="table-row">
+            <td>{{dateCaptured}}</td>
+            <td>{{title}}</td>
+            <td>{{link}}</td>
+            {{!-- <td class="align-middle"><button class="btn btn-table raised view-button" data-value="{{id}}">View</button></td> --}}
+            {{!-- <td class="align-middle"><button class="btn btn-table raised delete-button" data-value="{{id}}">&times;</button> --}}
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</section>

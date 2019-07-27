@@ -10,6 +10,10 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var ArticleSchema = new Schema({
+  dateCaptured: {
+    type: Date,
+    default: Date.now
+  },
   title: {
     type: String,
     required: true

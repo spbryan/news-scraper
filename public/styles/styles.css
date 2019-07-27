@@ -5,3 +5,26 @@
  * 
  * 2019-07-27
  ********************************/
+body {
+    background: url("../images/marble-background.jpg"); 
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.table-header {
+    background-color: rgb(35, 136, 203);
+    color: #ffffff;
+}
+  
+.table-body {
+    background-color: rgb(175,210,229);
+}
+
+#header {
+    background-color: antiquewhite;
+}
+
+#main-page {
+    background: url("../images/old-paper-background.jpg"); 
+    background-attachment: fixed;
+}
