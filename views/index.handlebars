@@ -86,17 +86,17 @@
           <tr>
             <th scope="col">Date</th>
             <th scope="col">Title</th>
-            <th scope="col">Link</th>
+            <th scope="col">Comments</th>
+            <th scope="col">Delete</th>
           </tr>
         </thead>
         <tbody class="table-body">
           {{#each article}}
           <tr class="table-row">
             <td>{{dateCaptured}}</td>
-            <td>{{title}}</td>
-            <td>{{link}}</td>
-            {{!-- <td class="align-middle"><button class="btn btn-table raised view-button" data-value="{{id}}">View</button></td> --}}
-            {{!-- <td class="align-middle"><button class="btn btn-table raised delete-button" data-value="{{id}}">&times;</button> --}}
+            <td><a href="{{link}}" target="_blank">{{title}}</a></td>
+            <td class="align-middle"><button class="btn btn-table raised comments-button" data-value="{{_id}}">Comments</button></td>
+            <td class="align-middle"><button class="btn btn-table raised delete-button" data-value="{{_id}}">&times;</button>
             </td>
           </tr>
           {{/each}}

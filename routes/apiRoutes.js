@@ -37,12 +37,36 @@ module.exports = function (app) {
                     });
             });
 
-            db.Article.find({}).sort({dateCapured:1}).then(function (dbArticle) {
+            db.Article.find({}).sort({ dateCapured: 1 }).then(function (dbArticle) {
                 res.render("index", { article: dbArticle });
             })
                 .catch(function (err) {
                     res.json(err);
                 });
+        });
+    });
+
+    // delete article
+    app.delete("/article/:id", function (req, res) {
+
+        db.Article.remove({ _id: req.params.id }).then(function (result) {
+            if (result.affectedRows == 0) {
+                return res.status(404).end();
+            } else {
+                res.status(200).end();
+            }
+
+            // db.Place.destroy({
+            //     where: {
+            //         id: req.params.id
+            //     }
+            // }).then(function (result) {
+            //     if (result.affectedRows == 0) {
+            //         return res.status(404).end();
+            //     } else {
+            //         res.status(200).end();
+            //     }
+            // })
         });
     });
 

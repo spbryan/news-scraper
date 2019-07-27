@@ -11,6 +11,15 @@ body {
     background-size: cover;
 }
 
+a {
+    color: black;
+}
+
+.btn-table {
+    background-image: linear-gradient(to right, rgb(124, 122, 122) 0%, rgb(167, 165, 165) 50%, grey 100%); 
+    border: 2px solid rgb(124, 122, 122);
+}
+
 .table-header {
     background-color: rgb(35, 136, 203);
     color: #ffffff;
