@@ -5,6 +5,24 @@
  * 
  * 2019-07-27
  ********************************/ --}}
-<div>
-  <h1>Start</h1>
+<div class='table-responsive'>
+  <table class="table table-striped stencil-font bigger-font" id="article-table">
+    <thead class="table-header">
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Link</th>
+      </tr>
+    </thead>
+    <tbody class="table-body">
+      {{#each article}}
+      <tr class="table-row">
+        <td>{{title}}</td>
+        <td>{{link}}</td>
+        {{!-- <td class="align-middle"><button class="btn btn-table raised view-button" data-value="{{id}}">View</button></td> --}}
+        {{!-- <td class="align-middle"><button class="btn btn-table raised delete-button" data-value="{{id}}">&times;</button> --}}
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
 </div>

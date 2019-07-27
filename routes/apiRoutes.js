@@ -31,17 +31,25 @@ module.exports = function (app) {
                 // Create a new Article using the `result`
                 db.Article.create(result)
                     .then(function (dbArticle) {
-                        console.log(dbArticle);
+                        // console.log(dbArticle);
                     })
                     .catch(function (err) {
                         // If an error occurred, log it
-                        console.log(err);
+                        // console.log(err);
                     });
             });
 
+            db.Article.find({}).then(function (dbArticle) {
+                res.render("index", { article: dbArticle });
+                // res.json(dbArticle);
+            })
+                .catch(function (err) {
+                    res.json(err);
+                });
+
             // Send a message to the client
             // res.send("Scrape Complete");
-            res.render("index", {});
+            // res.render("index", {});
         });
     });
 
