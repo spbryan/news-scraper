@@ -10,6 +10,20 @@ $(function () {
     $('#article-table').DataTable();
 
     /**
+     * On-Click event to scrape site for new entries
+     */
+    $("#scrape-articles").on("click", function (event) {
+        event.preventDefault();
+        $.ajax("/", {
+            type: "GET"
+        }).then(
+            function () {
+                location.reload();
+            }
+        );
+    })
+
+    /**
      * On-Click event to grab place information
      * and open place page
      */
@@ -35,6 +49,20 @@ $(function () {
     })
 
     /**
+     * On-Click event to delete all rows from the table
+     */
+    $("#delete-articles").on("click", function (event) {
+        event.preventDefault();
+        $.ajax("/article", {
+            type: "DELETE"
+        }).then(
+            function () {
+                location.reload();
+            }
+        );
+    })
+
+    /**
      * On-Click event to bring up modal to add 
      * Comment Information
      */
@@ -42,5 +70,7 @@ $(function () {
         event.preventDefault();
         $("#comment-modal").modal();
     });
+
+
     
 });

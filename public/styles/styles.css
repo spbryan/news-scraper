@@ -26,6 +26,13 @@ a {
     border: 2px solid rgb(124, 122, 122);
 }
 
+.crsl-img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    height: 250px;
+}
+
 .modal-content {
     padding: 15px;
     font-weight: bold;

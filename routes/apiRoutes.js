@@ -71,4 +71,16 @@ module.exports = function (app) {
         });
     });
 
+    // delete all articles
+    app.delete("/article", function (req, res) {
+
+        db.Article.remove().then(function (result) {
+            if (result.affectedRows == 0) {
+                return res.status(404).end();
+            } else {
+                res.status(200).end();
+            }
+        });
+    });
+
 };
