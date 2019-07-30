@@ -25,9 +25,13 @@
   <section class="row mt-4">
     <div class='col-sm-12'>
       {{#each comment}}
-      <div>
-        <p>{{user}}</p>
-        <p>{{body}}</p>
+      <div class="card mb-4">
+        <div class="card-header">
+          From User {{user}}
+        </div>
+        <div class="card-body">
+          <p class="card-text">{{body}}</p>
+           </div>
       </div>
       {{/each}}
     </div>

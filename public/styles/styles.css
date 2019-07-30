@@ -6,7 +6,7 @@
  * 2019-07-27
  ********************************/
 body {
-    background: url("../images/marble-background.jpg"); 
+    background: url("../images/granite-background.jpg"); 
     background-attachment: fixed;
     background-size: cover;
 }
@@ -21,39 +21,63 @@ a {
     width: 100px; 
 }
 
+.btn-primary {
+    background-color: #3f863f;
+    border: 2px solid black;
+    color: #efae0e;
+}
+
+.btn-primary:hover {
+    background-color: #002a86;
+    color: white;
+  }
+
 .btn-table {
     background-image: linear-gradient(to right, rgb(124, 122, 122) 0%, rgb(167, 165, 165) 50%, grey 100%); 
     border: 2px solid rgb(124, 122, 122);
 }
 
 .crsl-img {
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
+    border: 2px solid #002a86;
     border-radius: 4px;
-    padding: 5px;
+    padding: 6px;
     height: 250px;
 }
 
 .modal-content {
     padding: 15px;
     font-weight: bold;
-    background-image: url(../images/old-paper-background.jpg);
+    background-image: url(../images/sandpaper.png);
     background-attachment: fixed;
 }
 
 .table-header {
-    background-color: rgb(35, 136, 203);
-    color: #ffffff;
+    background-color: #002a86;
+    /* color: #ffffff; */
+    color: #efae0e;
+    font-weight: bold;
 }
   
 .table-body {
-    background-color: rgb(175,210,229);
+    /* background-color: rgb(175,210,229); */
+    background-color: #4f9eff;
+    font-weight: bold;
 }
 
 #header {
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
+    font-family: 'Cinzel Decorative', cursive;
+    /* font-family: 'Calligraffitti', cursive; */
+    /* font-family: 'Rye', cursive; */
+    /* font-family: 'Limelight', cursive; */
+    /* font-family: 'UnifrakturMaguntia', cursive; */
+    background-color: #002a86;
+    color: #efae0e;
 }
 
 #main-page {
-    background: url("../images/old-paper-background.jpg"); 
+    background: url("../images/sandpaper.png"); 
     background-attachment: fixed;
+    font-weight: bold;
 }

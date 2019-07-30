@@ -97,7 +97,9 @@ module.exports = function (app) {
             if (result.affectedRows == 0) {
                 return res.status(404).end();
             } else {
-                res.status(200).end();
+                db.Comment.remove().then(function (cresult) {
+                    res.status(200).end();
+                });
             }
         });
     });
