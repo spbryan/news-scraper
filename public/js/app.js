@@ -5,6 +5,9 @@
  * 
  * 2019-07-27
  ********************************/
+// VARIABLES
+var newUserName = $("#user-name")
+var newUserComment = $("#user-comment");
 
 $(function () {
     $('#article-table').DataTable();
@@ -68,9 +71,34 @@ $(function () {
      */
     $("#comment-btn").on("click", function (event) {
         event.preventDefault();
+        $("#comment-submit").attr("value",this.value);
         $("#comment-modal").modal();
     });
 
+
+     /**
+     * On-Click event to submit a new coment 
+     * to the database
+     */
+    $("#comment-submit").on("click", function (event) {
+        event.preventDefault();
+        var newComment = {
+            user: newUserName.val().trim(),
+            body: newUserComment.val().trim()
+        }
+
+        // Send the post request to village_db Reviews Table
+        $.ajax("/article/" + this.value, {
+            type: "POST",
+            data: newComment
+        }).then(
+            function () {
+                console.log("created new comment");
+                // Reload the review to get updated list
+                location.reload();
+            }
+        )
+    });
 
     
 });

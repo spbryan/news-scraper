@@ -16,9 +16,20 @@
 
   <section class="col m12">
     <div class="text-left">
-      <button type="submit" value="{{place.id}}" class="btn btn-form raised btn-lg mb-2" id="comment-btn"><span
+      <button type="submit" value="{{articleId}}" class="btn btn-primary raised btn-lg mb-2" id="comment-btn"><span
           class="fa fa-fire"></span>Add
         Comment</button>
+    </div>
+  </section>
+
+  <section class="row mt-4">
+    <div class='col-sm-12'>
+      {{#each comment}}
+      <div>
+        <p>{{user}}</p>
+        <p>{{body}}</p>
+      </div>
+      {{/each}}
     </div>
   </section>
 </section>

@@ -51,10 +51,29 @@ module.exports = function (app) {
         db.Article.findOne({ _id: req.params.id })
             .populate("comment")
             .then(function (dbArticle) {
-                res.render("comment", {comment: dbArticle.comment});
+                res.render("comment", {
+                    articleId: req.params.id,
+                    comment: dbArticle.comment
+                });
             })
             .catch(function (err) {
                 // If an error occurs, send the error back to the client
+                res.json(err);
+            });
+    });
+
+    app.post("/article/:id", function (req, res) {
+        db.Comment.create(req.body)
+            .then(function (dbComment) {
+                return db.Article.findOneAndUpdate({ _id: req.params.id }, { comment: dbComment._id }, { new: true });
+            })
+            .then(function (dbArticle) {
+                res.render("comment", {
+                    articleId: req.params.id,
+                    comment: dbArticle.comment
+                });
+            })
+            .catch(function (err) {
                 res.json(err);
             });
     });
