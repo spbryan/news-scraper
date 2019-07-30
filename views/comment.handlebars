@@ -7,34 +7,34 @@
  ********************************/ --}}
 <section class="container" id="comment-page">
   <section class="row text-center mt-1">
-    <div class="col-sm-12" id="header">
+    <div class="col-sm-12 pt-4 pb-4" id="header">
       <h1>New Hampshire News Bulleton</h1>
       <h2>Read Free or Die</h2>
       <a class="nav-link" href="/">Home</a>
     </div>
   </section>
-
-  <section class="col m12">
-    <div class="text-left">
-      <button type="submit" value="{{articleId}}" class="btn btn-primary raised btn-lg mb-2" id="comment-btn"><span
-          class="fa fa-fire"></span>Add
-        Comment</button>
+  <section class="row text-center mt-4">
+    <div class="col m12">
+        <button type="submit" value="{{articleId}}" class="btn btn-primary raised btn-lg mb-2" id="comment-btn"><span
+            class="fa fa-fire"></span>Add
+          Comment</button>
     </div>
   </section>
-
-  <section class="row mt-4">
-    <div class='col-sm-12'>
+  <section class="row mt-3">
+    <div class='col-sm-1'></div>
+    <div class='col-sm-10'>
       {{#each comment}}
       <div class="card mb-4">
-        <div class="card-header">
-          From User {{user}}
+        <div class="card-header text-center">
+          <h5>From user: {{user}} </h5>
         </div>
         <div class="card-body">
           <p class="card-text">{{body}}</p>
-           </div>
+        </div>
       </div>
       {{/each}}
     </div>
+    <div class='col-sm-1'></div>
   </section>
 </section>
 
@@ -43,18 +43,19 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
+        <h4 class="modal-title">Comment</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <form>
         <div class="form-group" id="user">
           <label for="user">User</label>
-          <textarea class="form-control" id="user-name" rows="1"></textarea>
+          <textarea class="form-control" cols="50" id="user-name" rows="1"></textarea>
         </div>
         <div class="form-group" id="comments">
           <label for="comment">Comments</label>
           <textarea class="form-control" id="user-comment" rows="6"></textarea>
         </div>
-        <button type="submit" class="btn btn-form" id="comment-submit">Submit</button>
+        <button type="submit" class="btn btn-secondary" id="comment-submit">Submit</button>
       </form>
     </div>
   </div>

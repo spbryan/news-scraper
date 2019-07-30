@@ -16,15 +16,18 @@ a {
 }
 
 .btn-form {
-    background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%);
+    /* background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%);
     border: 2px solid rgb(28, 110, 164); 
-    width: 100px; 
+    width: 100px;  */
+    background-image: linear-gradient(to right, rgb(124, 122, 122) 0%, rgb(167, 165, 165) 50%, grey 100%); 
+    border: 2px solid rgb(124, 122, 122);
 }
 
 .btn-primary {
     background-color: #3f863f;
     border: 2px solid black;
     color: #efae0e;
+    font-weight: bold;
 }
 
 .btn-primary:hover {
@@ -35,6 +38,16 @@ a {
 .btn-table {
     background-image: linear-gradient(to right, rgb(124, 122, 122) 0%, rgb(167, 165, 165) 50%, grey 100%); 
     border: 2px solid rgb(124, 122, 122);
+}
+
+/* .card-body {
+    font-weight: bold;
+} */
+
+.card-header {
+    background-color: #002a86;
+    color: #efae0e;
+    font-weight: bold;
 }
 
 .crsl-img {
@@ -50,6 +63,11 @@ a {
     font-weight: bold;
     background-image: url(../images/sandpaper.png);
     background-attachment: fixed;
+}
+
+.nav-link {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .table-header {
@@ -80,4 +98,5 @@ a {
     background: url("../images/sandpaper.png"); 
     background-attachment: fixed;
     font-weight: bold;
+    margin-bottom: 10px;
 }
