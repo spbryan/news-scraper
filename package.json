@@ -4,6 +4,7 @@
   "description": "Provide end user with titles and links to news articles and allows them to enter comments",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
